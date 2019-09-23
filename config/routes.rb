@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 end
 
 Blog::Application.routes.draw do
-  resources :contacts, only: [:new, :create]
+  resources :contacts, only: [:new, :create], path_names: { :new => ''}
   resources :articles
 end
 
