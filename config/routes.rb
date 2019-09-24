@@ -11,7 +11,7 @@ end
 Blog::Application.routes.draw do
   resources :contacts, only: [:new, :create], path_names: { :new => ''}
   resources :articles do 
-    resources :comments
+    resources :comments, only: [:create]
   end
 end
 
